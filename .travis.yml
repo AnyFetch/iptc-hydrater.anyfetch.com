@@ -1,5 +1,10 @@
 language: node_js
 node_js:
 - '0.10'
+
+install:
+- sudo apt-get install libexiv2-11 libexiv2-dev
+- npm install
+
 script:
 - npm test
