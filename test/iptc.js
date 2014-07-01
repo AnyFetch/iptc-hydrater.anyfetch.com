@@ -29,7 +29,30 @@ describe('Test results', function() {
 
       changes.metadata.author.should.eql('Frédéric RUAUDEL');
       changes.metadata.description.should.eql('© 2010 Frédéric Ruaudel, All Rights Reserved');
-      changes.metadata.keywords.should.eql([ '500px', 'Adulte', 'Blog FR', 'Fotografar2014', 'Homme', 'Personne', 'Xavier Bernard', 'iPhoto' ]);
+      changes.metadata.keywords.should.eql('500px, Adulte, Blog FR, Fotografar2014, Homme, Personne, Xavier Bernard, iPhoto');
+
+      done();
+    });
+  });
+
+  it('returns the correct informations', function(done) {
+    var document = {
+      data: {},
+      metadata: {
+      }
+    };
+
+    var changes = anyfetchFileHydrater.defaultChanges();
+
+    iptcHydrater(__dirname + "/samples/photo_2.jpg", document, changes, function(err, changes) {
+      if(err) {
+        done(new Error("It should not have an error"));
+      }
+
+      changes.should.have.property('metadata');
+      changes.metadata.should.not.have.property('author');
+      changes.metadata.should.not.have.property('description');
+      changes.metadata.should.not.have.property('keywords');
 
       done();
     });
