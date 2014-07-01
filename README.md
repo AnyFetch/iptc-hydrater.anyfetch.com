@@ -5,7 +5,7 @@ AnyFetch Hydrater for images.
 
 # How to install?
 ```
-apt-get install libexiv2 libexiv2-dev
+apt-get install libexiv2-dev
 npm install
 ```
 
