@@ -3,9 +3,8 @@
 require('should');
 
 var iptcHydrater = require('../lib/');
-var anyfetchFileHydrater = require('anyfetch-file-hydrater');
+var anyfetchFileHydrater = require('anyfetch-hydrater');
 
-var hydrationError = anyfetchFileHydrater.hydrationError;
 
 describe('Test results', function() {
   it('returns the correct informations (photo.jpg)', function(done) {

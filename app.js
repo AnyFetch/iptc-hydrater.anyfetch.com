@@ -1,7 +1,7 @@
 'use strict';
 
 // Load configuration and initialize server
-var anyfetchFileHydrater = require('anyfetch-file-hydrater');
+var anyfetchFileHydrater = require('anyfetch-hydrater');
 
 var config = require('./config/configuration.js');
 var imageHydrater = require('./lib');
