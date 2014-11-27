@@ -5,12 +5,9 @@ var anyfetchFileHydrater = require('anyfetch-hydrater');
 
 var config = require('./config/configuration.js');
 
-var serverConfig = {
-  concurrency: config.concurrency,
-  hydrater_function: __dirname + '/lib/index.js'
-};
+config.hydrater_function = __dirname + '/lib/index.js';
 
-var server = anyfetchFileHydrater.createServer(serverConfig);
+var server = anyfetchFileHydrater.createServer(config);
 
 // Expose the server
 module.exports = server;
