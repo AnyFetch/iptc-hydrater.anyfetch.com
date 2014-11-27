@@ -1,7 +1,8 @@
 language: node_js
 node_js:
 - '0.10'
-
+services:
+  - redis-server
 install:
 - sudo apt-get install libexiv2-11 libexiv2-dev
 - npm install
