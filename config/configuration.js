@@ -21,7 +21,7 @@ module.exports = {
 
   thumb_size: "350x250",
   display_size: "750x750",
-  concurrency: process.env.IMAGE_CONCURRENCY || defaultConcurrency,
+  concurrency: process.env.IPTC_CONCURRENCY || defaultConcurrency,
   appName: process.env.APP_NAME || "iptc-hydrater",
   redisUrl: process.env.REDIS_URL,
 
