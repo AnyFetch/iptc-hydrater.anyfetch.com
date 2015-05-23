@@ -21,9 +21,10 @@
     "tika"
   ],
   "dependencies": {
-    "async": "0.9.x",
     "anyfetch-hydrater": "^2.2.0",
-    "exiv2": "0.4.x"
+    "async": "0.9.x",
+    "exiv2": "0.4.x",
+    "heroku-self-ping": "^1.1.1"
   },
   "devDependencies": {
     "mocha": "^2.1.0",
